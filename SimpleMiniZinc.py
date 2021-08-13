@@ -109,3 +109,4 @@ class MiniZincProgram:
         minizinc_vars = "\n".join([f"{var.as_decl()};" for _, var in var_dict.items()])
         minizinc_constraints = "\n".join([f"constraint {constraint};" for constraint in map(str, self.constraints)])
         return minizinc_vars + "\n\n" + minizinc_constraints
+
